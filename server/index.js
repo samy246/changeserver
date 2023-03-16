@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 
 
+app.use(cors())
 app.use(express.json());
 
 // require("dotenv").config()
@@ -20,6 +21,7 @@ const db = mysql.createConnection(
   );
 
   app.post("/examreg/get",(req,res)=>{
+
     const sqlGet="SELECT * FROM examregister";
     db.query(sqlGet,(error,result)=>{
         if(error){
@@ -31,8 +33,8 @@ const db = mysql.createConnection(
             status: 'succes',
             data: result,
           })
-        //     res.statusCode(200);
-        // res.send(result);
+
+
           } else {
             res.send({ message: "No user found" });
           }
