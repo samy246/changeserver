@@ -7,15 +7,16 @@ const app = express();
 app.use(express.json());
 
 // require("dotenv").config()
- const urlDB=`mysql://root:strongpassword22.@localhost:3306/examreg`
+//  const urlDB=`mysql://root:strongpassword22.@localhost:5000/examreg`
 
-const db = mysql.createConnection(urlDB
-  // {
-  //   user: "root",
-  //   host: "localhost",
-  //   password: "strongpassword22.",
-  //   database: "examreg",
-  // }
+const db = mysql.createConnection(
+  {
+    user: "root",
+    host: "localhost",
+    password: "strongpassword22.",
+    database: "examreg",
+    port:"5000"
+  }
   );
 
   app.post("/examreg/get",(req,res)=>{
