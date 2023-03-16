@@ -15,7 +15,7 @@ const db = mysql.createConnection(
     host: "localhost",
     password: "strongpassword22.",
     database: "examreg",
-    port:"5000"
+
   }
   );
 
