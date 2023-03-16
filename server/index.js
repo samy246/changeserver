@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // require("dotenv").config()
- const urlDB=`mysql://root:strongpassword22.@0.0.0.0:3306/examreg`
+ const urlDB=`mysql://root:strongpassword22.@localhost:3306/examreg`
 
 const db = mysql.createConnection(urlDB
   // {
@@ -211,5 +211,5 @@ console.log("result.email",result.email);
 
 
 app.listen(5000, () => {
-    console.log("Running server 5000");
+    console.log("Running server port");
   });
