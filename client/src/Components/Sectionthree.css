@@ -1,0 +1,4 @@
+#scoremodal th,tr,td{
+  border: 1px solid black;
+  width: -webkit-fill-available;
+}
