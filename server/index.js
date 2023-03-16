@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
- const urlDB=`mysql://root:strongpassword22.@localhost:3306/examreg`
+ const urlDB=`mysql://root:strongpassword22.@0.0.0.0:3306/examreg`
 
 const db = mysql.createConnection(urlDB
   // {
